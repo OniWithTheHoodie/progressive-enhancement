@@ -8,6 +8,88 @@
 		<style>
 			/* Schrijf hier gewoon je CSS voor dit component */
 
+		h1 {
+			margin-bottom: 1em;
+		}
+
+		* {
+  			margin: 0;
+ 		 	padding: 0;
+		}
+
+		article {
+  			margin: 1em;
+		} 
+
+
+		details {
+		border: 0.2em solid black;
+		width: fit-content;
+		padding: 1em;
+		border-radius: 0.5em;
+		cursor: pointer;
+		margin-bottom: 1em;
+		}
+
+		summary {
+		list-style-type: none;
+		
+		}
+
+		summary > .rotate{
+		width: 1em;
+		margin-right: 1em;
+		}
+
+		details[open] {
+		border: none;
+		}
+
+		details[open] > summary {
+		background-color: pink;
+		width: fit-content;
+		margin-bottom: 1em;
+		padding: 1em;
+		border-top-left-radius: 1em;
+		border-top-right-radius: 1em;
+		list-style-type: none;
+		margin: -1em;
+		}
+
+		details[open] > summary > .rotate {
+		transform: rotate(45deg);
+		}
+
+		details[open] > blockquote {
+		background-color: pink;
+		padding: 1em;
+		width: 65%;
+		
+		border-radius: 0em 1em 1em 1em;
+		margin: -1em;
+		}
+
+		video {
+			margin-top: 3em;
+		}
+
+		section > details[open] {
+			margin-left: 1em;
+		}
+
+		details[open] > summary > .first {
+			background-color: var(--purple);
+		}
+
+		.second {
+			background-color: ;
+		}
+
+		.third {
+			background-color: ;
+		}
+
+
 			/* Hint: Dit component kun je volledig met HTML en CSS bouwen */
 
 			/* Hint: Denk aan de states van het component; deze kan open en dicht zijn */
@@ -17,10 +99,24 @@
 		<h1>Veelgestelde vragen</h1>
 
 
-		<!-- Content (waar nog wat HTML omheen moet 😄):
-		Wat is frontend development?
-		Een frontend developer ontwerpt en bouwt websites in HTML, CSS en JavaScript. Deze frontend talen leer je bij ons, je hebt dus geen voorkennis nodig.
+		<!-- Content (waar nog wat HTML omheen moet 😄): -->
 
+		<article>
+			<details class="first">
+			  <summary><svg class="rotate" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"/></svg>Wat is front end development ?</summary>
+			  <blockquote>Een frontend developer ontwerpt en bouwt websites in HTML, CSS en JavaScript. Deze frontend talen leer je bij ons, je hebt dus geen voorkennis nodig.         </blockquote>
+			</details>
+			<details class="second">
+			  <summary><svg class="rotate" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"/></svg>Wat is front end development ?</summary>
+			  <blockquote>Een frontend developer ontwerpt en bouwt websites in HTML, CSS en JavaScript. Deze frontend talen leer je bij ons, je hebt dus geen voorkennis nodig.         </blockquote>
+			</details>
+			<details class="third">
+			  <summary><svg class="rotate" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"/></svg>Wat is front end development ?</summary>
+			  <blockquote>Een frontend developer ontwerpt en bouwt websites in HTML, CSS en JavaScript. Deze frontend talen leer je bij ons, je hebt dus geen voorkennis nodig.         </blockquote>
+			</details>
+		  </article>  
+			
+		<!--
 		Moet ik al kunnen coderen?
 		Nee, je hebt helemaal geen voorkennis nodig om te beginnen aan deze opleiding, we kunnen je alles leren! Als je wel al voorkennis hebt, is dat alleen maar goed, dan kunnen we je helpen je skills te verbeteren en te verdiepen in de stof.
 
@@ -28,14 +124,16 @@
 		Een Associate degree-opleiding is een tweejarige hbo-opleiding op niveau 5. Een Ad slaat een brug tussen het mbo-4 (niveau 4) en een hbo-bachelor (niveau 6). Met een Associate degree kies je voor een praktijkgerichte hbo-opleiding; je wordt opgeleid voor een beroep dat aansluit bij de praktijk. In dit geval word je opgeleid tot ‘frontend designer/developer' of kortweg ‘frontender’. Frontenders ontwerpen en maken interactieve, toegankelijke toepassingen voor het web. Frontenders werken binnen het gebied van software development, interactieontwerp en digitaal visueel ontwerp.
 		Na afronding van deze tweejarige hbo-opleiding, krijg je een wettelijk erkend hbo-diploma met de graad Associate degree. Met dit Ad-diploma kun je direct aan de slag in het werkveld of doorstromen naar de bacheloropleiding Communication and Multimedia Design (CMD).
 		-->
-
+		
 
 		<!-- Hint: Dit stukje HTML geeft het misschien al weg :) -->
-		<details open>
-			<summary>Demo video</summary>
-			<video src="assets/faq.mp4" width="765" height="769" controls muted autoplay loop>
-				<a href="assets/faq.mp4">assets/faq.mp4</a>
-			</video>
-		</details>
+		<section>
+			<details open>
+				<summary>Demo video</summary>
+				<video src="assets/faq.mp4" width="765" height="769" controls muted autoplay loop>
+					<a href="assets/faq.mp4">assets/faq.mp4</a>
+				</video>
+			</details>
+		</section>
 	</body>
 </html>
