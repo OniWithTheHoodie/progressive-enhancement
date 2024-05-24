@@ -46,7 +46,7 @@
 		}
 
 		details[open] > summary {
-		background-color: pink;
+		/* background-color: pink; */
 		width: fit-content;
 		margin-bottom: 1em;
 		padding: 1em;
@@ -61,7 +61,7 @@
 		}
 
 		details[open] > blockquote {
-		background-color: pink;
+		/* background-color: pink; */
 		padding: 1em;
 		width: 65%;
 		
@@ -77,10 +77,21 @@
 			margin-left: 1em;
 		}
 
-		details[open] > summary > .first {
+		/* details[open] > summary > .first {
+			background-color: var(--purple);
+		} */
+
+		details[open]:nth-child(1) {
 			background-color: var(--purple);
 		}
 
+		details[open]:nth-child(2) {
+			background-color: var(--green);
+		}
+		
+		details[open]:nth-child(3) {
+			background-color: var(--yellow);
+		}
 			/* Hint: Dit component kun je volledig met HTML en CSS bouwen */
 
 			/* Hint: Denk aan de states van het component; deze kan open en dicht zijn */
@@ -93,15 +104,15 @@
 		<!-- Content (waar nog wat HTML omheen moet 😄): -->
 
 		<article>
-			<details class="first">
+			<details>
 			  <summary><svg class="rotate" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"/></svg>Wat is front end development ?</summary>
 			  <blockquote>Een frontend developer ontwerpt en bouwt websites in HTML, CSS en JavaScript. Deze frontend talen leer je bij ons, je hebt dus geen voorkennis nodig.         </blockquote>
 			</details>
-			<details class="second">
+			<details>
 			  <summary><svg class="rotate" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"/></svg>Wat is front end development ?</summary>
 			  <blockquote>Een frontend developer ontwerpt en bouwt websites in HTML, CSS en JavaScript. Deze frontend talen leer je bij ons, je hebt dus geen voorkennis nodig.         </blockquote>
 			</details>
-			<details class="third">
+			<details>
 			  <summary><svg class="rotate" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"/></svg>Wat is front end development ?</summary>
 			  <blockquote>Een frontend developer ontwerpt en bouwt websites in HTML, CSS en JavaScript. Deze frontend talen leer je bij ons, je hebt dus geen voorkennis nodig.         </blockquote>
 			</details>

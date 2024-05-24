@@ -6,9 +6,46 @@
 		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 		<link href="assets/styles.css" rel="stylesheet">
 		<style>
-			label {
-				background-color: 
-			}
+			body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+ 
+nav {
+  display: none;
+}
+ 
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+ 
+li {
+  padding: 10px;
+}
+ 
+a {
+  text-decoration: none;
+  color: #333;
+}
+ 
+.hamburger {
+  display: block;
+  font-size: 24px;
+  cursor: pointer;
+}
+ 
+/* Hide checkbox */
+#toggle {
+  display: none;
+}
+ 
+/* Show/hide nav on toggle */
+#toggle:checked + nav {
+  display: block;
+}
+ 
+
 
 			/* Hint: kijk eens naar :target */
 		</style>
@@ -50,6 +87,19 @@
 			<p>Suspendisse malesuada, nulla eget iaculis fermentum, libero dolor vestibulum urna, ut auctor dolor diam ut dolor. Nullam mollis congue luctus. Fusce nulla dolor, faucibus nec volutpat eget, consequat quis nisl. Cras id diam efficitur, congue lectus ac, vulputate leo. Morbi odio velit, finibus id ornare sit amet, luctus ut eros. Fusce fringilla eu diam quis tempor. Proin pretium purus a fringilla semper. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin lorem diam, laoreet at lectus quis, lobortis tempor tortor. Vivamus semper, ex convallis iaculis suscipit, risus augue bibendum sapien, nec volutpat lacus quam finibus arcu. Nunc non consectetur eros, eu viverra metus. Aliquam nisl risus, condimentum et sapien id, rutrum interdum odio. Nulla facilisi. Ut ac egestas quam.</p>
 			
 		</main>
+
+		<body>
+			<input type="checkbox" id="toggle">
+			<label for="toggle" class="hamburger">&#9776;</label>
+			<nav>
+			  <ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Services</a></li>
+				<li><a href="#">Contact</a></li>
+			  </ul>
+			</nav>
+		  </body>
 
 		<!-- Dit is het menu
 		<nav>
